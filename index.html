@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Left Panel -->
+        <div class="panel">
+            <div class="profile-header">
+                <div class="save-delete">
+                    <button class="btn-save">
+                        <i class="fas fa-check"></i>
+                        Save
+                    </button>
+                    <button class="btn-delete">
+                        <i class="fas fa-trash"></i>
+                        Delete
+                    </button>
+                </div>
+                <div class="viewed">
+                    <i class="fas fa-eye"></i>
+                    Viewed 7 days ago
+                </div>
+                <h1>Tanya Rocca</h1>
+                <div class="last-interaction">
+                    <i class="fas fa-history"></i>
+                    Last interaction 1w ago
+                </div>
+            </div>
+
+            <div class="status-selector">
+                <label for="status">Status</label>
+                <select id="status">
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                    <option value="pending">Pending</option>
+                    <option value="archived">Archived</option>
+                </select>
+            </div>
+
+            <div class="stage-selector">
+                <button class="stage-btn">
+                    <i class="fas fa-search"></i>
+                    Prospect
+                </button>
+                <button class="stage-btn active">
+                    <i class="fas fa-trophy"></i>
+                    Won
+                </button>
+                <button class="stage-btn">
+                    <i class="fas fa-times"></i>
+                    Lost
+                </button>
+            </div>
+
+            <div class="action-buttons">
+                <button class="action-btn">
+                    <i class="fas fa-phone"></i>
+                    <span>Callback</span>
+                </button>
+                <button class="action-btn">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </button>
+                <button class="action-btn">
+                    <i class="fas fa-calendar"></i>
+                    <span>Event</span>
+                </button>
+                <button class="action-btn">
+                    <i class="fas fa-sticky-note"></i>
+                    <span>Notes</span>
+                </button>
+            </div>
+
+            <div class="risk-level">
+                <span class="label">Potential risk to move</span>
+                <div class="risk-buttons">
+                    <button class="risk-btn high">
+                        <i class="fas fa-exclamation-circle"></i>
+                        High
+                    </button>
+                    <button class="risk-btn moderate">
+                        <i class="fas fa-exclamation"></i>
+                        Moderate
+                    </button>
+                    <button class="risk-btn low active">
+                        <i class="fas fa-check-circle"></i>
+                        Low
+                    </button>
+                    <button class="info-icon" title="Risk level indicates the likelihood of the agent changing brokerages">
+                        <i class="fas fa-info-circle"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="agent-info">
+                <h3>
+                    <i class="fas fa-user-circle"></i>
+                    Agent Info
+                </h3>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <span class="label">Time in Industry</span>
+                    <span class="value">0 yrs 0 mos</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="label">Distance to my Office</span>
+                    <span class="value">000,0 km</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-building"></i>
+                    <span class="label">Most Transacted City</span>
+                    <span class="value">Aaaaaaaaa</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Center Panel -->
+        <div class="panel">
+            <div class="sales-analytics">
+                <h2>
+                    <i class="fas fa-chart-line"></i>
+                    Sales Analytics
+                </h2>
+                <div class="time-filters">
+                    <button class="filter-btn active">LTM</button>
+                    <button class="filter-btn">YTD</button>
+                    <button class="filter-btn">QTD</button>
+                    <button class="filter-btn">MTD</button>
+                    <button class="filter-btn">Custom</button>
+                </div>
+
+                <div class="analytics-grid">
+                    <div class="metric-card">
+                        <div class="metric-label">Total Revenue</div>
+                        <div class="metric-value">$2.4M</div>
+                        <div class="metric-growth">
+                            <i class="fas fa-arrow-up"></i>
+                            +12.5% vs prev.
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Avg. Transaction Value</div>
+                        <div class="metric-value">$485K</div>
+                        <div class="metric-growth">
+                            <i class="fas fa-arrow-up"></i>
+                            +8.2% vs prev.
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Total Transactions</div>
+                        <div class="metric-value">142</div>
+                        <div class="metric-growth">
+                            <i class="fas fa-arrow-up"></i>
+                            +15.3% vs prev.
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Success Rate</div>
+                        <div class="metric-value">68.5%</div>
+                        <div class="metric-growth">
+                            <i class="fas fa-arrow-up"></i>
+                            +5.7% vs prev.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-percentages">
+                    <h3>Performance Metrics</h3>
+                    <div class="percentage-grid">
+                        <div class="percentage-item">
+                            <div class="label">Conversion Rate</div>
+                            <div class="value">24.8%</div>
+                        </div>
+                        <div class="percentage-item">
+                            <div class="label">Client Retention</div>
+                            <div class="value">92.3%</div>
+                        </div>
+                        <div class="percentage-item">
+                            <div class="label">Market Share</div>
+                            <div class="value">15.7%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="graph-section">
+                    <h3>Market Performance</h3>
+                    <div class="graph-tabs">
+                        <button class="tab-btn active">Revenue</button>
+                        <button class="tab-btn">Transactions</button>
+                        <button class="tab-btn">Success Rate</button>
+                        <button class="tab-btn">Market Share</button>
+                    </div>
+                    <canvas id="marketGraph"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="panel">
+            <div class="notes-section">
+                <div class="section-header">
+                    <h3>
+                        <i class="fas fa-sticky-note"></i>
+                        My Notes
+                    </h3>
+                    <div class="note-actions">
+                        <button class="btn-save">
+                            <i class="fas fa-check"></i>
+                            Save
+                        </button>
+                        <button class="btn-undo">
+                            <i class="fas fa-undo"></i>
+                            Undo
+                        </button>
+                    </div>
+                </div>
+                <div class="note-editor" contenteditable="true" placeholder="Add your notes here..."></div>
+                <div class="note-footer">
+                    <div class="timestamp">Last saved: 2 hours ago</div>
+                    <div class="word-count">0 words</div>
+                </div>
+            </div>
+
+            <div class="events-section">
+                <h3>
+                    <i class="fas fa-calendar"></i>
+                    Upcoming Events
+                </h3>
+                <div class="events-list">
+                    <div class="event-item">
+                        <div class="event-date">Today</div>
+                        <div class="event-details">
+                            <div class="event-subject">Client Meeting - John Smith</div>
+                            <div class="event-time">2:00 PM - 3:00 PM</div>
+                            <div class="event-location">Virtual Meeting</div>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">Tomorrow</div>
+                        <div class="event-details">
+                            <div class="event-subject">Property Viewing - 123 Main St</div>
+                            <div class="event-time">10:30 AM - 11:30 AM</div>
+                            <div class="event-location">On-site</div>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">May 30</div>
+                        <div class="event-details">
+                            <div class="event-subject">Contract Review</div>
+                            <div class="event-time">3:30 PM - 4:30 PM</div>
+                            <div class="event-location">Office</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="add-event" title="Add New Event">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+
+            <div class="ai-rankings">
+                <h3>
+                    <i class="fas fa-robot"></i>
+                    AI Rankings
+                </h3>
+                <div class="ranking-item positive">
+                    <div class="ranking-header">
+                        <span class="label">Top 0.001% by transactions</span>
+                        <span class="sublabel">99.999% did not achieve this rank.</span>
+                    </div>
+                </div>
+                <div class="ranking-item positive">
+                    <div class="ranking-header">
+                        <span class="label">Top 0.001% by $$ Volume</span>
+                        <span class="sublabel">99.999% did not achieve this rank.</span>
+                    </div>
+                </div>
+                <div class="ranking-item positive">
+                    <div class="ranking-header">
+                        <span class="label">Avg. days on market ratio is -9.93</span>
+                        <span class="sublabel">That signifies it took -10 days shorter than average to sell a home.</span>
+                    </div>
+                </div>
+                <div class="ranking-item positive">
+                    <div class="ranking-header">
+                        <span class="label">S/A ratio=1.61% higher than average.</span>
+                        <span class="sublabel">Results=$11,078 more per home sold.</span>
+                    </div>
+                </div>
+                <div class="ranking-item positive">
+                    <div class="ranking-header">
+                        <span class="label">Double Ends=12.63% Higher than average.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
